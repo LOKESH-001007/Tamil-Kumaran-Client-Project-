@@ -1,3 +1,4 @@
+import Seo from '../components/Seo'
 import { Link } from 'react-router-dom'
 import { useLang } from '../i18n'
 import { PROJECTS, CO, waLink } from '../data'
@@ -7,6 +8,11 @@ export default function Projects() {
   const { t, pick } = useLang()
   return (
     <>
+           <Seo
+        title="Our Plots in Salem: Tharapuram, Omalur, Murungappatti"
+        description="Explore DTCP & RERA approved plots near Salem Airport, Panchukalipatti (Omalur – Mecheri Highway) and Murungappatti near Sivaraj Medical College."
+        path="/projects"
+      />
       <PageHead title={t('projects_title')} sub={`${t('badge_dtcp')} · ${t('badge_loan')}`} img="land.jpg" />
       <section className="sec">
         {PROJECTS.map((p, i) => (
