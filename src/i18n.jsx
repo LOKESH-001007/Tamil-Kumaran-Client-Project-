@@ -25,9 +25,9 @@ const D = {
   sell_land: ['Sell Your Land', 'உங்கள் நிலத்தை விற்கவும்'],
 
   launch_title: ['Special Price Offer Ends In', 'சிறப்பு விலை முடிய இன்னும்'],
-  launch_sub: [
-    'Book with just ₹5 lakh and pay the balance in easy instalments.',
-    '₹5 லட்சம் மட்டும் செலுத்தி பதிவு செய்து, மீதத் தொகையை எளிய தவணைகளில் செலுத்துங்கள்.',
+    launch_sub: [
+    'Book your plot with a small advance and pay the balance in easy instalments.',
+    'சிறிய முன்பணம் செலுத்தி மனையை பதிவு செய்து, மீதத் தொகையை எளிய தவணைகளில் செலுத்துங்கள்.',
   ],
   days: ['Days', 'நாட்கள்'],
   hours: ['Hours', 'மணி'],
@@ -55,7 +55,7 @@ const D = {
   site_visit: ['Book Site Visit', 'Site Visit பதிவு செய்ய'],
   special_price: ['Special Price', 'சிறப்பு விலை'],
   poster: ['Poster', 'போஸ்டர்'],
-  layout: ['Layout Map', 'லேஅவுட் வரைபடம்'],
+   layout: ['Layout / Map', 'லேஅவுட் / வரைபடம்'],
   gallery_t: ['Posters & Layout', 'போஸ்டர் & லேஅவுட்'],
   tap_zoom: ['Tap image to zoom', 'பெரிதாக்க படத்தைத் தொடவும்'],
 
