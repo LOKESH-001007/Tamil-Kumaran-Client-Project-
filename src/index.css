@@ -220,7 +220,7 @@ input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold);box-s
 .foot h4{color:var(--gold2);margin-bottom:14px}
 .foot a{display:block;margin:6px 0;transition:.2s;word-break:break-word}
 .foot a:hover{color:var(--gold2);padding-left:4px}
-.copy{max-width:1180px;margin:34px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);font-size:.82rem;text-align:center}
+.copy{max-width:1180px;margin:34px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);font-size:.82rem}
 
 /* whatsapp */
 .wa{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;z-index:60;box-shadow:0 8px 22px rgba(0,0,0,.28);animation:pulse 2.2s infinite;transition:transform .25s}
@@ -276,3 +276,12 @@ input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold);box-s
   .th{width:68px;height:86px}
   .pj-body{padding:18px}
 }
+
+/* footer: copyright row + developer credit */
+.copy-row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#a9bfb2}
+.dev{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px;margin-top:14px;font-size:.95rem;color:#a9bfb2}
+.dev b{color:#fff}
+.dev i{font-style:normal;opacity:.6}
+.foot .dev a{display:inline-flex;align-items:center;gap:6px;margin:0;padding:0;color:#a9bfb2}
+.foot .dev a:hover{padding-left:0;color:var(--gold2)}
+@media(max-width:560px){.copy-row{flex-direction:column;text-align:center}}
