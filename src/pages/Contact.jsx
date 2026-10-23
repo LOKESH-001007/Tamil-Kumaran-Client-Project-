@@ -1,3 +1,4 @@
+import Seo from '../components/Seo'
 import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useLang } from '../i18n'
@@ -32,6 +33,11 @@ export default function Contact() {
 
   return (
     <>
+     <Seo
+        title="Contact & Sell Your Land in Salem | Tamil Kumaran"
+        description="Call 7604841996 or WhatsApp us to book a site visit, or sell your land in Salem and Namakkal. Office: Konapipe, Poolampatti Road, Idappadi 637101."
+        path="/contact"
+      />
       <PageHead title={t('contact_title')} sub={`${CO.phone} · ${CO.address}`} img="house.jpg" />
       <section className="sec">
         <div className="cgrid">
