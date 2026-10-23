@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useLang } from '../i18n'
 import { PROJECTS, STATS, LAUNCH_PROJECT, bg } from '../data'
 import { Reveal, Counter, Countdown, ProjectCard, CtaBand } from '../components/ui'
+import Seo from '../components/Seo'
 
 export default function Home() {
   const { t, pick } = useLang()
@@ -19,6 +20,12 @@ export default function Home() {
 
   return (
     <>
+      <Seo
+        title="DTCP Approved Plots in Salem & Namakkal | Tamil Kumaran"
+        description="Tamil Kumaran Real Estate & Properties: DTCP & RERA approved villa plots in Salem, Edappadi and Namakkal. Up to 70% bank loan. Book your site visit today."
+        path="/"
+      />
+
       <section className="hero" style={{ backgroundImage: bg('hero.jpg', 0.92, 0.6) }}>
         <div className="hero-in">
           <div>
@@ -80,7 +87,7 @@ export default function Home() {
           {tiles.map(([img, k], i) => (
             <Reveal key={k} delay={i * 120}>
               <Link className="tile" to="/projects">
-                <div className="tile-img" style={{ backgroundImage: `url(/projects/${img}), linear-gradient(135deg,#0b4f35,#c9a227)` }} />
+                <div className="tile-img" style={{ backgroundImage: bg(img, 0, 0) }} />
                 <div className="tile-t">
                   <h3>{t(k)}</h3>
                   <span>{t('tile_more')}</span>
