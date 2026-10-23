@@ -1,3 +1,4 @@
+import Seo from '../components/Seo'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLang } from '../i18n'
@@ -34,6 +35,11 @@ export default function EMI() {
 
   return (
     <>
+    <Seo
+        title="Plot Loan EMI Calculator | Tamil Kumaran Real Estate"
+        description="Calculate your monthly EMI for a plot or villa purchase with up to 70% bank loan. Free EMI calculator by Tamil Kumaran Real Estate, Salem."
+        path="/emi"
+      />
       <PageHead title={t('emi_title')} sub={t('badge_loan')} img="keys.jpg" />
       <section className="sec">
         <div className="emi">
