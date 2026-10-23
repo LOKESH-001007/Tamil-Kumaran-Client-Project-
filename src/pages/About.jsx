@@ -1,11 +1,21 @@
+import Seo from '../components/Seo'
 import { useLang } from '../i18n'
+
 import { bg } from '../data'
 import { PageHead, Reveal, CtaBand } from '../components/ui'
+
 
 export default function About() {
   const { t } = useLang()
   return (
+
+    
     <>
+    <Seo
+        title="About Us | Tamil Kumaran Real Estate & Properties, Idappadi"
+        description="Tamil Kumaran helps families in Salem and Namakkal buy approved plots with trust, transparency and value. Visit our office at Poolampatti Road, Idappadi."
+        path="/about"
+      />
       <PageHead title={t('about_title')} sub={`${t('trust')} · ${t('transp')} · ${t('value')}`} img="house.jpg" />
 
       <section className="sec">
