@@ -14,18 +14,18 @@ const D = {
 
   badge_dtcp: ['DTCP & RERA Approved', 'DTCP & RERA அங்கீகாரம்'],
   badge_loan: ['Up to 70% Bank Loan', '70% வரை வங்கிக் கடன்'],
-  badge_area: ['Salem & Namakkal', 'சேலம் & நாமக்கல்'],
+  badge_area: ['Salem District', 'சேலம் மாவட்டம்'],
 
   hero_title: ['Own Your Dream Land with Confidence', 'நம்பிக்கையுடன் உங்கள் கனவு நிலத்தை சொந்தமாக்குங்கள்'],
   hero_sub: [
-    'DTCP & RERA approved plots across Salem and Namakkal with up to 70% bank loan support.',
-    'சேலம் மற்றும் நாமக்கல் பகுதிகளில் DTCP & RERA அங்கீகரிக்கப்பட்ட மனைகள், 70% வரை வங்கிக் கடன் வசதியுடன்.',
+    'DTCP & RERA approved plots in and around Salem with up to 70% bank loan support.',
+    'சேலம் மற்றும் அதன் சுற்றுப்பகுதிகளில் DTCP & RERA அங்கீகரிக்கப்பட்ட மனைகள், 70% வரை வங்கிக் கடன் வசதியுடன்.',
   ],
   view_projects: ['View Projects', 'திட்டங்களைப் பார்க்க'],
   sell_land: ['Sell Your Land', 'உங்கள் நிலத்தை விற்கவும்'],
 
   launch_title: ['Special Price Offer Ends In', 'சிறப்பு விலை முடிய இன்னும்'],
-    launch_sub: [
+  launch_sub: [
     'Book your plot with a small advance and pay the balance in easy instalments.',
     'சிறிய முன்பணம் செலுத்தி மனையை பதிவு செய்து, மீதத் தொகையை எளிய தவணைகளில் செலுத்துங்கள்.',
   ],
@@ -35,7 +35,7 @@ const D = {
   secs: ['Seconds', 'விநாடி'],
 
   stat_loan: ['Max Bank Loan', 'அதிகபட்ச வங்கிக் கடன்'],
-  stat_dist: ['Districts Served', 'சேவை மாவட்டங்கள்'],
+  stat_dist: ['Active Projects', 'நடப்பில் உள்ள திட்டங்கள்'],
   stat_fam: ['Happy Families', 'மகிழ்ச்சியான குடும்பங்கள்'],
 
   explore_t: ['Land, Homes & Communities', 'நிலம், வீடு & குடியிருப்பு பகுதிகள்'],
@@ -55,7 +55,7 @@ const D = {
   site_visit: ['Book Site Visit', 'Site Visit பதிவு செய்ய'],
   special_price: ['Special Price', 'சிறப்பு விலை'],
   poster: ['Poster', 'போஸ்டர்'],
-   layout: ['Layout / Map', 'லேஅவுட் / வரைபடம்'],
+  layout: ['Layout / Map', 'லேஅவுட் / வரைபடம்'],
   gallery_t: ['Posters & Layout', 'போஸ்டர் & லேஅவுட்'],
   tap_zoom: ['Tap image to zoom', 'பெரிதாக்க படத்தைத் தொடவும்'],
 
@@ -64,8 +64,8 @@ const D = {
 
   about_title: ['About Us', 'எங்களைப் பற்றி'],
   about_p1: [
-    'Tamil Kumaran Real Estate & Properties helps families in Salem and Namakkal find approved, genuine plots they can trust.',
-    'தமிழ் குமரன் ரியல் எஸ்டேட் & பிராபர்ட்டீஸ், சேலம் மற்றும் நாமக்கல் பகுதிகளில் குடும்பங்கள் நம்பிக்கையுடன் வாங்கக்கூடிய அங்கீகரிக்கப்பட்ட மனைகளை வழங்குகிறது.',
+    'Tamil Kumaran Real Estate & Properties helps families in and around Salem find approved, genuine plots they can trust.',
+    'தமிழ் குமரன் ரியல் எஸ்டேட் & பிராபர்ட்டீஸ், சேலம் பகுதிகளில் குடும்பங்கள் நம்பிக்கையுடன் வாங்கக்கூடிய அங்கீகரிக்கப்பட்ட மனைகளை வழங்குகிறது.',
   ],
   about_p2: [
     'From site visit to registration and bank loan support, we stay with you at every step.',
@@ -75,8 +75,8 @@ const D = {
   mission_d: ['Make owning land simple, safe and affordable.', 'நிலம் வாங்குவதை எளிதாகவும் பாதுகாப்பாகவும் மலிவாகவும் மாற்றுவது.'],
   vision_t: ['Our Vision', 'எங்கள் தொலைநோக்கு'],
   vision_d: [
-    'To be the most trusted real estate name in Salem and Namakkal.',
-    'சேலம் மற்றும் நாமக்கல்லில் மிகவும் நம்பகமான ரியல் எஸ்டேட் நிறுவனமாக திகழ்வது.',
+    'To be the most trusted real estate name in Salem.',
+    'சேலத்தில் மிகவும் நம்பகமான ரியல் எஸ்டேட் நிறுவனமாக திகழ்வது.',
   ],
   process_t: ['Our Simple Process', 'எங்கள் எளிய நடைமுறை'],
   s1: ['Site Visit', 'இடம் பார்வை'],
@@ -87,7 +87,6 @@ const D = {
   projects_title: ['Our Projects', 'எங்கள் திட்டங்கள்'],
   All: ['All', 'அனைத்தும்'],
   Salem: ['Salem', 'சேலம்'],
-  Namakkal: ['Namakkal', 'நாமக்கல்'],
   Ongoing: ['Ongoing', 'நடப்பில்'],
   Upcoming: ['Upcoming', 'விரைவில்'],
   Completed: ['Completed', 'முடிந்தது'],
