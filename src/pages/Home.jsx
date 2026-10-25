@@ -21,8 +21,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="DTCP Approved Plots in Salem & Namakkal | Tamil Kumaran"
-        description="Tamil Kumaran Real Estate & Properties: DTCP & RERA approved villa plots in Salem, Edappadi and Namakkal. Up to 70% bank loan. Book your site visit today."
+        title="DTCP Approved Plots in Salem | Tamil Kumaran"
+        description="Tamil Kumaran Real Estate & Properties: DTCP & RERA approved villa plots in Salem and Edappadi. Up to 70% bank loan. Book your site visit today."
         path="/"
       />
 
