@@ -11,7 +11,7 @@ export const CO = {
   address: 'Konapipe, Poolampatti Road, Idappadi - 637101',
 }
 
-export const SITE_URL = 'https://www.yourdomain.com' // no slash at the end
+export const SITE_URL = 'https://www.tamilkumaranrealestate.co.in' // no slash at the end // no slash at the end
 
 export const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxDNc-CQ7RKVC_hsiSfviYpsqpqS4LjVeilAkqoVv_ZxDtaoF9yScc1XB7wj2Ds6vgrSg/exec'
 
