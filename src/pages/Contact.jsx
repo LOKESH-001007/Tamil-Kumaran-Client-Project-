@@ -1,9 +1,20 @@
-import Seo from '../components/Seo'
 import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useLang } from '../i18n'
-import { CO, PROJECTS, waLink } from '../data'
+import { CO, PROJECTS, SHEET_URL, waLink } from '../data'
 import { PageHead, Reveal } from '../components/ui'
+import Seo from '../components/Seo'
+
+// save the lead to Google Sheet in the background (does not block WhatsApp)
+function saveLead(kind, data) {
+  if (!SHEET_URL.includes('script.google.com')) return
+  fetch(SHEET_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    keepalive: true,
+    body: new URLSearchParams({ kind, ...data }),
+  }).catch(() => {})
+}
 
 export default function Contact() {
   const { t } = useLang()
@@ -14,6 +25,7 @@ export default function Contact() {
   const submit = (kind) => (e) => {
     e.preventDefault()
     const d = Object.fromEntries(new FormData(e.target))
+    saveLead(kind, d)
     const lines =
       kind === 'enq'
         ? ['*New Enquiry - Tamil Kumaran*', `Name: ${d.name}`, `Phone: ${d.phone}`, `Interested in: ${d.project || 'General Enquiry'}`, `Message: ${d.message || '-'}`]
@@ -24,18 +36,20 @@ export default function Contact() {
     setTimeout(() => setOk(false), 4000)
   }
 
-  const Common = () => (
+  const common = (
     <div className="row">
       <div><label>{t('f_name')}</label><input name="name" required /></div>
       <div><label>{t('f_phone')}</label><input name="phone" required pattern="[0-9]{10}" inputMode="numeric" maxLength={10} /></div>
+      {/* hidden spam trap: real visitors never fill this */}
+      <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }} />
     </div>
   )
 
   return (
     <>
-     <Seo
+      <Seo
         title="Contact & Sell Your Land in Salem | Tamil Kumaran"
-        description="Call 7604841996 or WhatsApp us to book a site visit, or sell your land in Salem and Namakkal. Office: Konapipe, Poolampatti Road, Idappadi 637101."
+        description="Call 7604841996 or WhatsApp us to book a site visit, or sell your land in Salem. Office: Konapipe, Poolampatti Road, Idappadi 637101."
         path="/contact"
       />
       <PageHead title={t('contact_title')} sub={`${CO.phone} · ${CO.address}`} img="house.jpg" />
@@ -50,7 +64,7 @@ export default function Contact() {
 
               {tab === 'enq' ? (
                 <form className="form" onSubmit={submit('enq')} key="enq">
-                  <Common />
+                  {common}
                   <div>
                     <label>{t('f_interest')}</label>
                     <select name="project" defaultValue={sp.get('project') || ''}>
@@ -63,14 +77,13 @@ export default function Contact() {
                 </form>
               ) : (
                 <form className="form" onSubmit={submit('sell')} key="sell">
-                  <Common />
+                  {common}
                   <div className="row">
                     <div><label>{t('f_place')}</label><input name="place" required /></div>
                     <div>
                       <label>{t('f_district')}</label>
                       <select name="district">
                         <option value="Salem">{t('Salem')}</option>
-                        <option value="Namakkal">{t('Namakkal')}</option>
                         <option value="Other">{t('Other')}</option>
                       </select>
                     </div>
