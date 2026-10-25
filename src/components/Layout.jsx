@@ -84,7 +84,7 @@ export function Footer() {
           <h4>{CO.full}</h4>
           <p>{t('trust')} · {t('transp')} · {t('value')}</p>
           <p style={{ marginTop: 10 }}>{t('badge_dtcp')} · {t('badge_loan')}</p>
-          <p lang="ta" style={{ marginTop: 10 }}>சேலம் & நாமக்கல் DTCP, RERA அங்கீகரிக்கப்பட்ட வீட்டு மனைகள் – தமிழ் குமரன் ரியல் எஸ்டேட்</p>
+          <p lang="ta" style={{ marginTop: 10 }}>சேலம் DTCP, RERA அங்கீகரிக்கப்பட்ட வீட்டு மனைகள் – தமிழ் குமரன் ரியல் எஸ்டேட்</p>
         </div>
         <div>
           <h4>{t('quick')}</h4>
