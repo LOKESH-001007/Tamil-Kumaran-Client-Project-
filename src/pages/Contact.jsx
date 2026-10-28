@@ -49,7 +49,7 @@ export default function Contact() {
     <>
       <Seo
         title="Contact & Sell Your Land in Salem | Tamil Kumaran"
-        description="Call 7604841996 or WhatsApp us to book a site visit, or sell your land in Salem. Office: Konapipe, Poolampatti Road, Idappadi 637101."
+               description="Call 7604841996 or WhatsApp us to book a site visit, or sell your land in Salem. Office: Suramangalam Main Road, Thiruvakavundanur, Salem 636005."
         path="/contact"
       />
       <PageHead title={t('contact_title')} sub={`${CO.phone} · ${CO.address}`} img="house.jpg" />
@@ -130,8 +130,7 @@ export default function Contact() {
                 <a href={CO.insta} target="_blank" rel="noreferrer">📷 {CO.instaId}</a><br />
                 <a href={CO.fb} target="_blank" rel="noreferrer">👍 {CO.fbName}</a>
               </p>
-              <iframe title="map" loading="lazy" src="https://www.google.com/maps?q=Edappadi%2C%20Salem%20637101&output=embed" />
-            </div>
+                           <iframe title="map" loading="lazy" src="https://www.google.com/maps?q=Nambikkai%20Munai%20Valaagam%2C%20Suramangalam%20Main%20Road%2C%20Salem%20636005&output=embed" />
           </Reveal>
         </div>
       </section>
