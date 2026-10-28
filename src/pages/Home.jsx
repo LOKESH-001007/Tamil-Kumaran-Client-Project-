@@ -22,8 +22,7 @@ export default function Home() {
     <>
       <Seo
         title="DTCP Approved Plots in Salem | Tamil Kumaran"
-        description="Tamil Kumaran Real Estate & Properties: DTCP & RERA approved villa plots in Salem and Edappadi. Up to 70% bank loan. Book your site visit today."
-        path="/"
+               description="Tamil Kumaran Real Estate & Properties: DTCP & RERA approved villa plots in Salem. Up to 70% bank loan. Book your site visit today."
       />
 
       <section className="hero" style={{ backgroundImage: bg('hero.jpg', 0.92, 0.6) }}>
