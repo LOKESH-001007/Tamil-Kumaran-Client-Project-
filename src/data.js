@@ -130,12 +130,12 @@ export const PROJECTS = [
     district: 'Salem',
     status: 'Ongoing',
     price: { en: '₹2,660 per sq ft', ta: 'ஒரு சதுர அடி ₹2,660' },
-    img: '/projects/icon-villas.jpg',          // cover picture
+        img: '/projects/icon-villas.jpeg',         // cover picture (the road map for now)
     posters: [],
-    photos: ['/projects/icon-villas.jpg'],     // if this photo is a poster with text, move it to posters
-    layouts: [],
-    videos: ['/projects/icon-villas.mp4'],     // your own MP4 file
-    youtube: [],                               // or a YouTube video ID, e.g. ['AbC123xyz']
+    photos: [],
+    layouts: ['/projects/icon-villas.jpeg'],   // road map / layout
+    videos: ['/projects/icon-villas.mp4'],     // your video
+    youtube: [],                             // or a YouTube video ID, e.g. ['AbC123xyz']
     features: [
       { icon: '✅', en: 'DTCP & RERA approved gated community', ta: 'DTCP & RERA அங்கீகாரம் பெற்ற Gated Community' },
       { icon: '📍', en: 'On-road project (on the main road)', ta: 'பிரதான சாலையிலேயே (On-Road Project)' },
