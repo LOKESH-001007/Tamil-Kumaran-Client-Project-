@@ -131,8 +131,8 @@ export const PROJECTS = [
     status: 'Ongoing',
     price: { en: '₹2,660 per sq ft', ta: 'ஒரு சதுர அடி ₹2,660' },
         img: '/projects/icon-villas.jpeg',         // cover picture (the road map for now)
-    posters: [],
-    photos: [],
+    posters: ['/projects/icon-villas.jpeg'],
+    photos: ['/projects/icon-villas.jpeg'],
     layouts: ['/projects/icon-villas.jpeg'],   // road map / layout
     videos: ['/projects/icon-villas.mp4'],     // your video
     youtube: [],                             // or a YouTube video ID, e.g. ['AbC123xyz']
