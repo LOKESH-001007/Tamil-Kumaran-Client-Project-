@@ -8,8 +8,8 @@ export default function About() {
   return (
     <>
       <Seo
-        title="About Us | Tamil Kumaran Real Estate & Properties, Idappadi"
-        description="Tamil Kumaran helps families in Salem buy approved plots with trust, transparency and value. Visit our office at Poolampatti Road, Idappadi."
+              title="About Us | Tamil Kumaran Real Estate & Properties, Salem"
+        description="Tamil Kumaran helps families in Salem buy approved plots with trust, transparency and value. Visit our office on Suramangalam Main Road, Salem."
         path="/about"
       />
       <PageHead title={t('about_title')} sub={`${t('trust')} · ${t('transp')} · ${t('value')}`} img="house.jpg" />
