@@ -8,10 +8,10 @@ export const CO = {
   // Replace with your real Facebook page URL when you have it
   fb: 'https://www.facebook.com/search/top?q=Tamilkumaran%20Real%20Estate%20and%20Properties',
   fbName: 'Tamilkumaran Real Estate and Properties',
-    address: 'Nambikkai Munai Valaagam, Suramangalam Main Road, Thiruvagoundanoor Bypass, Thiruvakavundanur, Salem - 636005',
+  address: 'Nambikkai Munai Valaagam, Suramangalam Main Road, Thiruvagoundanoor Bypass, Thiruvakavundanur, Salem - 636005',
 }
 
-export const SITE_URL = 'https://www.tamilkumaranrealestate.co.in' // no slash at the end
+export const SITE_URL = 'https://www.tamilkumaranrealestate.co.in/' // no slash at the end
 
 export const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxDNc-CQ7RKVC_hsiSfviYpsqpqS4LjVeilAkqoVv_ZxDtaoF9yScc1XB7wj2Ds6vgrSg/exec'
 
@@ -113,8 +113,7 @@ export const PROJECTS = [
     ],
   },
 
-
-    {
+   {
     id: 4,
     name: 'The Icon Villas',
     title: { en: 'The Icon Villas', ta: 'THE ICON VILLAS' },
@@ -130,12 +129,12 @@ export const PROJECTS = [
     district: 'Salem',
     status: 'Ongoing',
     price: { en: '₹2,660 per sq ft', ta: 'ஒரு சதுர அடி ₹2,660' },
-        img: '/projects/icon-villas.jpeg',         // cover picture (the road map for now)
-    posters: ['/projects/icon-villas.jpeg'],
-    photos: ['/projects/icon-villas.jpeg'],
-    layouts: ['/projects/icon-villas.jpeg'],   // road map / layout
-    videos: ['/projects/icon-villas.mp4'],     // your video
-    youtube: [],                             // or a YouTube video ID, e.g. ['AbC123xyz']
+   img: '/projects/icon-villas.jpeg',
+posters: ['/projects/icon-villas.jpeg'],
+photos: [],
+layouts: [],
+videos: ['/projects/icon-villas.mp4'],// your own MP4 file
+    youtube: [],                               // or a YouTube video ID, e.g. ['AbC123xyz']
     features: [
       { icon: '✅', en: 'DTCP & RERA approved gated community', ta: 'DTCP & RERA அங்கீகாரம் பெற்ற Gated Community' },
       { icon: '📍', en: 'On-road project (on the main road)', ta: 'பிரதான சாலையிலேயே (On-Road Project)' },
@@ -147,7 +146,6 @@ export const PROJECTS = [
       { icon: '🤝', en: 'Direct sale by the company – no broker commission', ta: 'நிறுவனத்தின் நேரடி விற்பனை – இடைத்தரகர் கமிஷன் இல்லை' },
     ],
   },
- 
 ]
 
 export const waLink = (text) => `https://wa.me/${CO.wa}?text=${encodeURIComponent(text)}`
