@@ -1,13 +1,17 @@
+import Seo from '../components/Seo'
 import { useLang } from '../i18n'
+
 import { bg } from '../data'
 import { PageHead, Reveal, CtaBand } from '../components/ui'
-import Seo from '../components/Seo'
+
 
 export default function About() {
   const { t } = useLang()
   return (
+
+    
     <>
-      <Seo
+    <Seo
               title="About Us | Tamil Kumaran Real Estate & Properties, Salem"
         description="Tamil Kumaran helps families in Salem buy approved plots with trust, transparency and value. Visit our office on Suramangalam Main Road, Salem."
         path="/about"
