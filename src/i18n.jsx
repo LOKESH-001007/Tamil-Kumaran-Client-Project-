@@ -56,7 +56,9 @@ const D = {
   special_price: ['Special Price', 'சிறப்பு விலை'],
   poster: ['Poster', 'போஸ்டர்'],
   layout: ['Layout / Map', 'லேஅவுட் / வரைபடம்'],
-  gallery_t: ['Posters & Layout', 'போஸ்டர் & லேஅவுட்'],
+    gallery_t: ['Gallery', 'படத்தொகுப்பு'],
+  photo: ['Photo', 'புகைப்படம்'],
+  video: ['Video', 'வீடியோ'],
   tap_zoom: ['Tap image to zoom', 'பெரிதாக்க படத்தைத் தொடவும்'],
 
   cta_title: ['Own land? Sell it with us.', 'நிலம் உள்ளதா? எங்களிடம் விற்கவும்.'],
