@@ -22,7 +22,7 @@ export const LAUNCH_PROJECT = 'Tharapuram - Phase 2'
 // Sample numbers: replace with real ones
 export const STATS = [
   { n: 70, s: '%', k: 'stat_loan' },
-  { n: 3, s: '', k: 'stat_dist' },
+  { n: 4, s: '', k: 'stat_dist' },
   { n: 250, s: '+', k: 'stat_fam' },
 ]
 
@@ -113,9 +113,8 @@ export const PROJECTS = [
     ],
   },
 
-  /* THE ICON VILLAS: switched off until the client confirms it is a current project
-     and sends its poster. Remove these comment markers, give it id: 4 and add images.
-  {
+
+    {
     id: 4,
     name: 'The Icon Villas',
     title: { en: 'The Icon Villas', ta: 'THE ICON VILLAS' },
@@ -131,9 +130,12 @@ export const PROJECTS = [
     district: 'Salem',
     status: 'Ongoing',
     price: { en: '₹2,660 per sq ft', ta: 'ஒரு சதுர அடி ₹2,660' },
-    img: '',
+    img: '/projects/icon-villas.jpg',          // cover picture
     posters: [],
+    photos: ['/projects/icon-villas.jpg'],     // if this photo is a poster with text, move it to posters
     layouts: [],
+    videos: ['/projects/icon-villas.mp4'],     // your own MP4 file
+    youtube: [],                               // or a YouTube video ID, e.g. ['AbC123xyz']
     features: [
       { icon: '✅', en: 'DTCP & RERA approved gated community', ta: 'DTCP & RERA அங்கீகாரம் பெற்ற Gated Community' },
       { icon: '📍', en: 'On-road project (on the main road)', ta: 'பிரதான சாலையிலேயே (On-Road Project)' },
@@ -145,7 +147,7 @@ export const PROJECTS = [
       { icon: '🤝', en: 'Direct sale by the company – no broker commission', ta: 'நிறுவனத்தின் நேரடி விற்பனை – இடைத்தரகர் கமிஷன் இல்லை' },
     ],
   },
-  */
+ 
 ]
 
 export const waLink = (text) => `https://wa.me/${CO.wa}?text=${encodeURIComponent(text)}`
