@@ -103,7 +103,7 @@ export function Footer() {
       <div className="copy">
         <div className="copy-row">
           <span>© {new Date().getFullYear()} {CO.full}. {t('rights')}</span>
-          <span>Idappadi, Salem, Tamil Nadu 637101</span>
+          <span>Salem, Tamil Nadu 636005</span>
         </div>
         <div className="dev">
           <span>Developed by <b>{DEV.name}</b></span>
