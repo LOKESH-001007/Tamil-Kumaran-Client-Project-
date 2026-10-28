@@ -204,27 +204,3 @@ export function ProjectGallery({ p }) {
     </div>
   )
 }
-
-export function ProjectGallery({ p }) {
-  const { t } = useLang()
-  const [open, setOpen] = useState(null)
-  const items = [
-    ...(p.posters || []).map((src) => ({ src, label: t('poster'), kind: 'poster' })),
-    ...(p.layouts || []).map((src) => ({ src, label: t('layout'), kind: 'layout' })),
-  ]
-  if (!items.length) return null
-  return (
-    <div className="gal">
-      <div className="gal-h">{t('gallery_t')}</div>
-      <div className="thumbs">
-        {items.map((it, i) => (
-          <button key={it.src} className="th" onClick={() => setOpen(i)}>
-            <img src={it.src} alt="" loading="lazy" />
-            {it.kind === 'layout' && <span>{t('layout')}</span>}
-          </button>
-        ))}
-      </div>
-      {open !== null && <Lightbox items={items} start={open} onClose={() => setOpen(null)} />}
-    </div>
-  )
-}
