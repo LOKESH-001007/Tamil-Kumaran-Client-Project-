@@ -140,21 +140,68 @@ export function Lightbox({ items, start, onClose }) {
 
   const stop = (e) => e.stopPropagation()
   const cur = items[i]
+  const isFile = cur.kind === 'video'
+  const isYt = cur.kind === 'youtube'
+  const isVid = isFile || isYt
 
   return createPortal(
     <div className="lb" onClick={onClose}>
       <button className="lb-x" onClick={onClose} aria-label="Close">✕</button>
       {n > 1 && <button className="lb-n prev" onClick={(e) => { stop(e); go(-1) }} aria-label="Previous">‹</button>}
-      <div className="lb-box" onClick={stop}>
-        <img src={cur.src} alt={cur.label} className={zoom ? 'z' : ''} onClick={() => setZoom(!zoom)} />
+      <div className={`lb-box ${isVid ? 'vid' : ''}`} onClick={stop}>
+        {isYt ? (
+          <iframe
+            key={cur.src}
+            className="lb-frame"
+            src={`https://www.youtube-nocookie.com/embed/${cur.src}?autoplay=1&rel=0`}
+            title={cur.label}
+            allow="autoplay; encrypted-media; fullscreen"
+            allowFullScreen
+          />
+        ) : isFile ? (
+          <video key={cur.src} className="lb-video" src={cur.src} controls autoPlay playsInline />
+        ) : (
+          <img src={cur.src} alt={cur.label} className={zoom ? 'z' : ''} onClick={() => setZoom(!zoom)} />
+        )}
       </div>
       {n > 1 && <button className="lb-n next" onClick={(e) => { stop(e); go(1) }} aria-label="Next">›</button>}
       <div className="lb-c">
-        {cur.label} · {i + 1}/{n} · {t('tap_zoom')}
-        <a href={cur.src} target="_blank" rel="noreferrer">↗</a>
+        {cur.label} · {i + 1}/{n}{!isVid && ` · ${t('tap_zoom')}`}
+        {!isYt && <a href={cur.src} target="_blank" rel="noreferrer">↗</a>}
       </div>
     </div>,
     document.body
+  )
+}
+
+export function ProjectGallery({ p }) {
+  const { t } = useLang()
+  const [open, setOpen] = useState(null)
+  const items = [
+    ...(p.posters || []).map((src) => ({ src, label: t('poster'), kind: 'poster' })),
+    ...(p.photos || []).map((src) => ({ src, label: t('photo'), kind: 'photo' })),
+    ...(p.layouts || []).map((src) => ({ src, label: t('layout'), kind: 'layout' })),
+    ...(p.videos || []).map((src) => ({ src, label: t('video'), kind: 'video', thumb: p.img })),
+    ...(p.youtube || []).map((src) => ({ src, label: t('video'), kind: 'youtube', thumb: `https://img.youtube.com/vi/${src}/hqdefault.jpg` })),
+  ]
+  if (!items.length) return null
+  return (
+    <div className="gal">
+      <div className="gal-h">{t('gallery_t')}</div>
+      <div className="thumbs">
+        {items.map((it, i) => {
+          const isVid = it.kind === 'video' || it.kind === 'youtube'
+          return (
+            <button key={it.kind + it.src} className="th" onClick={() => setOpen(i)}>
+              <img src={isVid ? it.thumb : it.src} alt={`${p.name} – ${it.label}`} loading="lazy" width="78" height="98" />
+              {isVid && <em className="play">▶</em>}
+              {(it.kind === 'layout' || isVid) && <span>{it.label}</span>}
+            </button>
+          )
+        })}
+      </div>
+      {open !== null && <Lightbox items={items} start={open} onClose={() => setOpen(null)} />}
+    </div>
   )
 }
 
