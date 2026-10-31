@@ -21,11 +21,11 @@ function Slider({ label, value, set, min, max, step = 1 }) {
 export default function EMI() {
   const { t } = useLang()
   const [price, setPrice] = useState(1000000)
-  const [pct, setPct] = useState(70)
+  const [pct, setPct] = useState(80)
   const [rate, setRate] = useState(9)
   const [years, setYears] = useState(15)
 
-  const loan = (price * Math.min(pct, 70)) / 100
+  const loan = (price * Math.min(pct, 80)) / 100
   const n = Math.max(years, 1) * 12
   const r = rate / 12 / 100
   const emi = r ? (loan * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1) : loan / n
@@ -46,7 +46,7 @@ export default function EMI() {
           <Reveal>
             <div className="card">
               <Slider label={t('e_price')} value={price} set={setPrice} min={100000} max={20000000} step={50000} />
-              <Slider label={t('e_pct')} value={Math.min(pct, 70)} set={setPct} min={10} max={70} />
+              <Slider label={t('e_pct')} value={Math.min(pct, 80)} set={setPct} min={10} max={80} />
               <Slider label={t('e_rate')} value={rate} set={setRate} min={6} max={18} step={0.1} />
               <Slider label={t('e_years')} value={years} set={setYears} min={1} max={30} />
             </div>
