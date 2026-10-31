@@ -8,7 +8,7 @@ export const CO = {
   // Replace with your real Facebook page URL when you have it
   fb: 'https://www.facebook.com/search/top?q=Tamilkumaran%20Real%20Estate%20and%20Properties',
   fbName: 'Tamilkumaran Real Estate and Properties',
-  address: 'Nambikkai Munai Valaagam, Suramangalam Main Road, Thiruvagoundanoor Bypass, Thiruvakavundanur, Salem - 636005',
+    address: 'Thiruvagoundanoor Bypass, Salem',
 }
 
 export const SITE_URL = 'https://www.tamilkumaranrealestate.co.in/' // no slash at the end
