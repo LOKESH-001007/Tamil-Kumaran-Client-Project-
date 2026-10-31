@@ -98,7 +98,7 @@ const D = {
 
   emi_title: ['EMI Calculator', 'EMI கணிப்பான்'],
   e_price: ['Property Price (₹)', 'சொத்து மதிப்பு (₹)'],
-  e_pct: ['Loan % of price (max 70)', 'கடன் % (அதிகபட்சம் 70)'],
+  e_pct: ['Loan % of price (max 80)', 'கடன் % (அதிகபட்சம் 80)'],
   e_rate: ['Interest Rate (% p.a.)', 'வட்டி விகிதம் (% ஆண்டுக்கு)'],
   e_years: ['Tenure (years)', 'காலம் (ஆண்டுகள்)'],
   e_emi: ['Monthly EMI', 'மாதாந்திர EMI'],
