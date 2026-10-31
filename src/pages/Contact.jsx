@@ -19,37 +19,30 @@ function saveLead(kind, data) {
 export default function Contact() {
   const { t } = useLang()
   const [sp] = useSearchParams()
-  const [tab, setTab] = useState(sp.get('tab') === 'sell' ? 'sell' : 'enq')
   const [ok, setOk] = useState(false)
 
-  const submit = (kind) => (e) => {
+  const submit = (e) => {
     e.preventDefault()
     const d = Object.fromEntries(new FormData(e.target))
-    saveLead(kind, d)
-    const lines =
-      kind === 'enq'
-        ? ['*New Enquiry - Tamil Kumaran*', `Name: ${d.name}`, `Phone: ${d.phone}`, `Interested in: ${d.project || 'General Enquiry'}`, `Message: ${d.message || '-'}`]
-        : ['*Sell Your Land - Tamil Kumaran*', `Name: ${d.name}`, `Phone: ${d.phone}`, `Location: ${d.place}`, `District: ${d.district}`, `Area: ${d.area} ${d.unit}`, `Land type: ${d.ltype}`, `Expected price: ${d.price || '-'}`, `Details: ${d.message || '-'}`]
+    saveLead('enq', d)
+    const lines = [
+      '*New Enquiry - Tamil Kumaran*',
+      `Name: ${d.name}`,
+      `Phone: ${d.phone}`,
+      `Interested in: ${d.project || 'General Enquiry'}`,
+      `Message: ${d.message || '-'}`,
+    ]
     window.open(waLink(lines.join('\n')), '_blank')
     setOk(true)
     e.target.reset()
     setTimeout(() => setOk(false), 4000)
   }
 
-  const common = (
-    <div className="row">
-      <div><label>{t('f_name')}</label><input name="name" required /></div>
-      <div><label>{t('f_phone')}</label><input name="phone" required pattern="[0-9]{10}" inputMode="numeric" maxLength={10} /></div>
-      {/* hidden spam trap: real visitors never fill this */}
-      <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }} />
-    </div>
-  )
-
   return (
     <>
       <Seo
-        title="Contact & Sell Your Land in Salem | Tamil Kumaran"
-        description="Call 7604841996 or WhatsApp us to book a site visit, or sell your land in Salem. Office: Suramangalam Main Road, Thiruvakavundanur, Salem 636005."
+        title="Contact Us – Book a Site Visit in Salem | Tamil Kumaran"
+        description="Call 7604841996 or WhatsApp us to book a site visit for DTCP & RERA approved plots in Salem. Office: Thiruvagoundanoor Bypass, Salem."
         path="/contact"
       />
       <PageHead title={t('contact_title')} sub={`${CO.phone} · ${CO.address}`} img="house.jpg" />
@@ -57,64 +50,24 @@ export default function Contact() {
         <div className="cgrid">
           <Reveal>
             <div className="card">
-              <div className="tabs">
-                <button className={tab === 'enq' ? 'on' : ''} onClick={() => setTab('enq')}>{t('tab_enq')}</button>
-                <button className={tab === 'sell' ? 'on' : ''} onClick={() => setTab('sell')}>{t('tab_sell')}</button>
-              </div>
-
-              {tab === 'enq' ? (
-                <form className="form" onSubmit={submit('enq')} key="enq">
-                  {common}
-                  <div>
-                    <label>{t('f_interest')}</label>
-                    <select name="project" defaultValue={sp.get('project') || ''}>
-                      <option value="">{t('f_general')}</option>
-                      {PROJECTS.map((p) => <option key={p.id} value={p.name}>{p.name}</option>)}
-                    </select>
-                  </div>
-                  <div><label>{t('f_msg')}</label><textarea name="message" rows="4" /></div>
-                  <button className="btn red" type="submit">{t('f_send')}</button>
-                </form>
-              ) : (
-                <form className="form" onSubmit={submit('sell')} key="sell">
-                  {common}
-                  <div className="row">
-                    <div><label>{t('f_place')}</label><input name="place" required /></div>
-                    <div>
-                      <label>{t('f_district')}</label>
-                      <select name="district">
-                        <option value="Salem">{t('Salem')}</option>
-                        <option value="Other">{t('Other')}</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div><label>{t('f_area')}</label><input name="area" type="number" min="0" step="any" required /></div>
-                    <div>
-                      <label>{t('f_unit')}</label>
-                      <select name="unit">
-                        <option value="Cent">{t('Cent')}</option>
-                        <option value="Acre">{t('Acre')}</option>
-                        <option value="Sq.ft">{t('Sqft')}</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div>
-                      <label>{t('f_ltype')}</label>
-                      <select name="ltype">
-                        <option value="Residential">{t('Residential')}</option>
-                        <option value="Agricultural">{t('Agricultural')}</option>
-                        <option value="Commercial">{t('Commercial')}</option>
-                      </select>
-                    </div>
-                    <div><label>{t('f_price')}</label><input name="price" placeholder="₹" /></div>
-                  </div>
-                  <div><label>{t('f_details')}</label><textarea name="message" rows="3" /></div>
-                  <p className="muted" style={{ fontSize: '.82rem' }}>{t('sell_note')}</p>
-                  <button className="btn red" type="submit">{t('f_send')}</button>
-                </form>
-              )}
+              <h3 style={{ marginBottom: 18 }}>{t('tab_enq')}</h3>
+              <form className="form" onSubmit={submit}>
+                <div className="row">
+                  <div><label>{t('f_name')}</label><input name="name" required /></div>
+                  <div><label>{t('f_phone')}</label><input name="phone" required pattern="[0-9]{10}" inputMode="numeric" maxLength={10} /></div>
+                  {/* hidden spam trap: real visitors never fill this */}
+                  <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }} />
+                </div>
+                <div>
+                  <label>{t('f_interest')}</label>
+                  <select name="project" defaultValue={sp.get('project') || ''}>
+                    <option value="">{t('f_general')}</option>
+                    {PROJECTS.map((p) => <option key={p.id} value={p.name}>{p.name}</option>)}
+                  </select>
+                </div>
+                <div><label>{t('f_msg')}</label><textarea name="message" rows="4" /></div>
+                <button className="btn red" type="submit">{t('f_send')}</button>
+              </form>
               {ok && <p className="okmsg">✔ {t('ok')}</p>}
             </div>
           </Reveal>
@@ -133,7 +86,7 @@ export default function Contact() {
               <iframe
                 title="map"
                 loading="lazy"
-                src="https://www.google.com/maps?q=Nambikkai%20Munai%20Valaagam%2C%20Suramangalam%20Main%20Road%2C%20Salem%20636005&output=embed"
+                src="https://www.google.com/maps?q=Thiruvagoundanoor%20Bypass%2C%20Salem&output=embed"
               />
             </div>
           </Reveal>
