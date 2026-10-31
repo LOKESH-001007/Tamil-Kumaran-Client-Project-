@@ -21,7 +21,7 @@ export const LAUNCH_PROJECT = 'Tharapuram - Phase 2'
 
 // Sample numbers: replace with real ones
 export const STATS = [
-  { n: 70, s: '%', k: 'stat_loan' },
+  { n: 80, s: '%', k: 'stat_loan' },
   { n: 4, s: '', k: 'stat_dist' },
   { n: 250, s: '+', k: 'stat_fam' },
 ]
