@@ -13,7 +13,7 @@ const D = {
   value: ['Value', 'மதிப்பு'],
 
   badge_dtcp: ['DTCP & RERA Approved', 'DTCP & RERA அங்கீகாரம்'],
-  badge_loan: ['Up to 70% Bank Loan', '70% வரை வங்கிக் கடன்'],
+  badge_loan: ['Up to 80% Bank Loan', '80% வரை வங்கிக் கடன்'],
   badge_area: ['Salem District', 'சேலம் மாவட்டம்'],
 
   hero_title: ['Own Your Dream Land with Confidence', 'நம்பிக்கையுடன் உங்கள் கனவு நிலத்தை சொந்தமாக்குங்கள்'],
@@ -22,7 +22,8 @@ const D = {
     'சேலம் மற்றும் அதன் சுற்றுப்பகுதிகளில் DTCP & RERA அங்கீகரிக்கப்பட்ட மனைகள், 70% வரை வங்கிக் கடன் வசதியுடன்.',
   ],
   view_projects: ['View Projects', 'திட்டங்களைப் பார்க்க'],
-  sell_land: ['Sell Your Land', 'உங்கள் நிலத்தை விற்கவும்'],
+  cta_title: ['Ready to visit a site?', 'இடத்தைப் பார்க்க தயாரா?'],
+  cta_sub: ['Book a site visit with our team today.', 'இன்றே எங்கள் குழுவுடன் Site Visit பதிவு செய்யுங்கள்.'],
 
   launch_title: ['Special Price Offer Ends In', 'சிறப்பு விலை முடிய இன்னும்'],
   launch_sub: [
