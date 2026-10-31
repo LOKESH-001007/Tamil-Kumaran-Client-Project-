@@ -110,7 +110,7 @@ export function CtaBand() {
         <Reveal>
           <h2 className="cta-h">{t('cta_title')}</h2>
           <p className="muted-w">{t('cta_sub')}</p>
-          <Link className="btn gold" to="/contact?tab=sell">{t('sell_land')}</Link>
+      <Link className="btn gold" to="/contact">{t('site_visit')}</Link>
         </Reveal>
       </div>
     </section>
