@@ -34,7 +34,7 @@ export default function Home() {
             <Reveal delay={200}><p>{t('hero_sub')}</p></Reveal>
             <Reveal delay={300} className="btns">
               <Link className="btn gold" to="/projects">{t('view_projects')}</Link>
-              <Link className="btn ghost" to="/contact?tab=sell">{t('sell_land')}</Link>
+              <Link className="btn ghost" to="/contact">{t('nav_contact')}</Link>
             </Reveal>
             <Reveal delay={400} className="badges">
               <span>✔ {t('badge_loan')}</span>
